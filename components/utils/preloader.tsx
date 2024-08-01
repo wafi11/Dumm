@@ -4,15 +4,14 @@ import styles from "./preloader.module.scss";
 
 const words = [
   "Hello",
-  "Hi",
   "Gooten",
   "Olà",
   "やあ",
   "Hallå",
   "Guten tag",
   "Hallo",
+  "Welcome!",
 ];
-
 export default function Preloader() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import data from "./data.json";
 import Image from "next/image";
 import { height, opacity, translate } from "@/components/utils/anim";
-import { usePathname } from "next/navigation";
 
 interface Item {
   nama: string;
@@ -18,26 +17,25 @@ interface Data {
 }
 
 export const Header: React.FC = () => {
-  const pathaname = usePathname();
   const [isActive, setIsActive] = useState(false);
   const [selectedLink, setSelectedLink] = useState({
     isActive: false,
     index: 0,
   });
 
-  const toggle = useCallback(() => {
+  const toggle = () => {
     setIsActive((prev) => !prev);
-  }, [isActive]);
+  };
 
   return (
-    <div className="bg-accent fixed w-full z-40 font-blog text-secondary">
+    <div className="bg-accent fixed w-full z-40 font-blogh-full text-secondary">
       <div className="flex justify-between uppercase text-[30px] font-normal relative px-10">
         <Link href={"/"} className="font-bebas ">
           Portofolio
         </Link>
         <div
           onClick={toggle}
-          className="flex items-center justify-center gap-2 cursor-pointer"
+          className="flex items-center  justify-center gap-2 cursor-pointer"
         >
           <svg
             className={`w-8 h-8 transition-transform duration-500 items-center ${
@@ -66,9 +64,9 @@ export const Header: React.FC = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="absolute top-10 z-50 bg-accent h-[300px] flex justify-between left-0 w-full"
+            className="absolute top-10 z-50 bg-accent h-full flex justify-between left-0 w-full"
           >
-            <div className="flex flex-col w-full text-[40px] leading-none h-[300px]">
+            <div className="flex flex-col w-full text-[40px] leading-none ">
               <Body
                 links={data.data}
                 selectedLink={selectedLink}
@@ -96,7 +94,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-4 items-center text-[12px] uppercase mt-[40px] px-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center text-[12px] uppercase  p-10">
       {footerItems.map((item, index) => (
         <ul
           key={`foter_${index}`}
@@ -153,7 +151,7 @@ const Body: React.FC<BodyProps> = ({
     return chars;
   };
   return (
-    <div className="flex gap-4 px-10 h-[200px] items-center">
+    <div className="flex flex-col md:flex-row gap-4 px-10 h-full md:h-[200px]  py-[50px] items-center">
       {links.map((item, index) => {
         const { nama, link } = item;
         return (
