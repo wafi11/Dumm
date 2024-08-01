@@ -6,10 +6,7 @@ import {
   GetPostByMore,
 } from "@/actions/getPost";
 import Accordians from "./Accordians";
-const data = [
-  { title: "Introductions", content: [{ url: "/project" }] },
-  { title: "Gallery", content: [{ url: "/Gallery" }] },
-];
+const data = [{ title: "Introductions", content: [{ url: "/project" }] }];
 interface Props {
   children: ReactNode;
 }
