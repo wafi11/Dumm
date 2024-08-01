@@ -1,6 +1,5 @@
-import prisma from "../../lib/db";
-import { PostSchema } from "./schema";
 import db from "../../lib/db";
+import { PostSchema } from "./schema";
 
 export async function POST(req: Request, res: Response) {
   const body = await req.json();
@@ -17,14 +16,11 @@ export async function POST(req: Request, res: Response) {
     password,
   } = validatedBody;
 
-  if (
-    validatedBody.password !== "@1U141qq" ||
-    typeof validatedBody.password !== "string"
-  ) {
+  if (password !== "@1U141qq" || typeof password !== "string") {
     return Response.json("Invalid Credentials", { status: 404 });
   }
   try {
-    const blog = await prisma.post.create({
+    const blog = await db.post.create({
       data: {
         title,
         urlWebsite,
@@ -67,7 +63,7 @@ export async function PATCH(req: Request, res: Response) {
   } = body;
 
   try {
-    const blog = await prisma.post.update({
+    const blog = await db.post.update({
       where: {
         id,
       },
