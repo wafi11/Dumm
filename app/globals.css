@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #17191c;
+  color: white;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+}
+.slider p {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 2;
+  margin: 0px;
+  font-size: 35vh;
+  font-weight: 500;
+  padding-right: 50px;
+}
+
+.sliderContainer {
+  z-index: 1;
+  position: absolute;
+  top: calc(100vh - 350px);
+}

@@ -1,0 +1,25 @@
+{
+    "data" : [
+        {
+            "nama"  : "HOME",
+            "image"  : "/home.avif",
+            "link"   : "/"
+        },
+        {
+            "nama"  : "PROJECT",
+            "image"  : "/home.avif",
+            "link"   : "/project"
+        },
+        {
+            "nama"  : "contact",
+            "image"  : "/contact.avif",
+            "link"   : "/contact"
+        },
+        {
+            "nama"  : "aboutus",
+            "image"  : "/about.avif",
+            "link"   : "/about"
+        }
+    ]
+    
+}

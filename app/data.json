@@ -1,0 +1,41 @@
+{
+    "Profile" : [
+       {
+            "nama"  : "Summary",
+            "text"  : ["Developer  & Designer"]
+       }
+    ],
+    "Skills"  : [
+        {
+            "nama"  : "Skills",
+            "text" : ["SiAstro","FaReact","RiNextjsFill"]
+        }
+    ],
+    "SocialLinks" : [
+        {
+            "nama"  : "Social Links",
+            "text"  : [ "FaInstagram",
+            "FaGithub",
+           "FaTwitter"]
+        }
+    ],
+        "experience"  : [
+            {
+                "nama" : "Experience",
+                "text"  : [
+                    "1 year of Web developer"
+                ]
+            }
+        ],
+        "phrase1" : {
+       "nama" :  "I have honed my skills in various programming languages & frameworks. Proficient in multiple programming languages and frameworks. Extensive experience with programming languages and frameworks."
+        },
+        
+    "phrase2" : 
+    {
+        "nama" :
+        " I have perfected my expertise in various design tools & creative  processes Skilled in diverse design tools and creative processes."
+    },
+       "text_about"  : "  I'am a Web Developer & Web Designer with over 1 year of experience learn & working for the web. I'm available for freeelance oppurtunities.",
+"text_about2": "I understand the staging and development of websites. My portfolio details my projects, and I explain more about the technologies I use. My projects include e-commerce platforms, blogs, and competition websites. "
+}
